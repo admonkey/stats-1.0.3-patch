@@ -14,3 +14,5 @@
 
 ##Why?
 the current PECL installer requires PHP7, so this provides a manual way to install the stats functions on servers running PHP5
+###INITGN called before random number generator initialized -- abort!
+if you are seeing this error message in the apache logs when using the random generator functions like `stats_rand_gen_normal()` and the browser is only showing something like `No data received` then that is because of [Bug #57830](https://bugs.php.net/patch-display.php?bug_id=57830&patch=fix_randlib.c_add_static&revision=latest) and this patched version is for you.
